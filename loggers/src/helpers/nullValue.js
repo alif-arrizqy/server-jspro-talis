@@ -1,0 +1,43 @@
+const pmsLoggersNull = {
+  battVolt: null,
+  cpuTemp: null,
+  dockActive: null,
+  load1: null,
+  load2: null,
+  load3: null,
+  energyId: 1,
+  pvId: 1,
+  cellMax: null,
+  cellMin: null,
+  valueMax: null,
+  valueMin: null,
+};
+
+const pmsCellNull = {
+  dock: null,
+  voltage: null,
+  current: null,
+  cmosState: null,
+  dmosState: null,
+  tempCmos: null,
+  tempDmos: null,
+  tempTop: null,
+  tempMid: null,
+  tempBot: null,
+  cell1: null,
+  cell2: null,
+  cell3: null,
+  cell4: null,
+  cell5: null,
+  cell6: null,
+  cell7: null,
+  cell8: null,
+  cell9: null,
+  cell10: null,
+  cell11: null,
+  cell12: null,
+  cell13: null,
+  cell14: null,
+};
+
+export { pmsLoggersNull, pmsCellNull };
