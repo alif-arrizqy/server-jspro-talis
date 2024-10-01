@@ -154,7 +154,7 @@ model SiteInfoDetail {
   longitude         Float?       
   createdAt         DateTime     @default(now())
   updatedAt         DateTime     @updatedAt
-  siteInformation   SiteInformation  @relation(fields: [nojsSite], references: [nojs], onDelete: Cascade)
+  siteInformation   SiteInformation?  @relation(fields: [nojsSite], references: [nojs], onDelete: Cascade)
 }
 
 model BmsLoggers {
