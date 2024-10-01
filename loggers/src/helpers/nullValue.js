@@ -40,4 +40,55 @@ const pmsCellNull = {
   cell14: null,
 };
 
-export { pmsLoggersNull, pmsCellNull };
+const bmsCellNull = {
+  cell1: null,
+  cell2: null,
+  cell3: null,
+  cell4: null,
+  cell5: null,
+  cell6: null,
+  cell7: null,
+  cell8: null,
+  cell9: null,
+  cell10: null,
+  cell11: null,
+  cell12: null,
+  cell13: null,
+  cell14: null,
+  cell15: null,
+  cell16: null,
+};
+
+const bmsLoggersNull = {
+  slaveId: null,
+  port: null,
+  pcbCode: null,
+  sn1Code: null,
+  packVoltage: null,
+  packCurrent: null,
+  remainingCapacity: null,
+  averageCellTemperature: null,
+  environmentTemperature: null,
+  soc: null,
+  soh: null,
+  fullChargedCapacity: null,
+  cycleCount: null,
+  maxCellVoltage: null,
+  minCellVoltage: null,
+  cellDifference: null,
+  maxCellTemperature: null,
+  minCellTemperature: null,
+  fetTemperature: null,
+  ambientTemperature: null,
+  remainingChargeTime: null,
+  remainingDischargeTime: null,
+  cellTemperature1: null,
+  cellTemperature2: null,
+  cellTemperature3: null,
+  warningFlag: [],
+  protectionFlag: [],
+  faultStatus: [],
+  errorMessages: [],
+};
+
+export { pmsLoggersNull, pmsCellNull, bmsCellNull, bmsLoggersNull };
