@@ -1,8 +1,10 @@
+import moment from "moment-timezone";
 import prisma from "../../app.js";
 import { tsFormatter } from "../../helpers/timestampFormatter.js";
 import * as ResponseHelper from "../../helpers/responseHelper.js";
 import validateTalisLoggers from "../../helpers/validationSchema/talisValidation.js";
 import { fetchLoggerTalis, deleteLoggerTalis } from "../../helpers/fetchApiHelper.js";
+import { bmsLoggersNull, bmsCellNull } from "../../helpers/nullValue.js";
 
 const createBmsCellVoltage = async (talisCell) => {
   try {
@@ -50,7 +52,10 @@ const handleDeleteLogger = async (ip, tsArray) => {
             console.log(`Failed to delete talis logger data for ts: ${ts}`);
           }
         } catch (error) {
-          console.error(`Error deleting talis logger data for ts: ${ts}`, error);
+          console.error(
+            `Error deleting talis logger data for ts: ${ts}`,
+            error
+          );
         }
       })
     );
@@ -61,13 +66,63 @@ const handleDeleteLogger = async (ip, tsArray) => {
   return deleteResults;
 };
 
+const createFirstData = async () => {
+  try {
+    // check if id 1 is already exists
+    const isExists = await prisma.bmsCellVoltage.findUnique({
+      where: { id: 1 },
+    });
+
+    if (isExists) {
+      console.log("Data already exists");
+      return ResponseHelper.errorMessage("Data already exists", 400);
+    }
+
+    // create first data
+    await prisma.bmsCellVoltage.create({
+      data: {
+        ...bmsCellNull,
+      },
+    });
+
+    return ResponseHelper.successMessage(
+      "First data created successfully",
+      201
+    );
+  } catch (error) {
+    console.error("Error in createFirstData:", error);
+    return ResponseHelper.errorMessage("Failed to create first data", 500);
+  }
+};
+
 const createTalisLoggers = async (nojsSite, ip) => {
   try {
     const loggerData = await fetchLoggerTalis(ip);
 
     if (loggerData === null) {
       console.log("No response received from server");
-      return ResponseHelper.errorMessage("No response received from server", 404);
+      // return ResponseHelper.errorMessage("No response received from server", 404);
+
+      try {
+        // Insert null data
+        await prisma.bmsLoggers.create({
+          data: {
+            ...bmsLoggersNull,
+            ts: moment().tz("Asia/Jakarta").format("YYYY-MM-DD HH:mm:ss"),
+            siteInformation: {
+              connect: { nojs: nojsSite }, // Adjust this based on your schema
+            },
+            bmsCellVoltage: {
+              connect: { id: 1 },
+            }
+          },
+        });
+
+        return ResponseHelper.successMessage("Talis loggers with null values created successfully", 201);
+      } catch (error) {
+        console.error("Error inserting talis loggers data:", error);
+        return ResponseHelper.errorMessage("Failed to insert talis loggers data", 500);
+      }
     }
 
     const validatedData = await validateTalisLoggers(loggerData.data);
@@ -117,4 +172,4 @@ const createTalisLoggers = async (nojsSite, ip) => {
   }
 };
 
-export { createTalisLoggers };
+export { createTalisLoggers, createFirstData };
