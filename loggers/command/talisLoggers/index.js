@@ -7,8 +7,8 @@ const main = async () => {
     console.log("Database connection established.");
 
     // Add nojsLoggers
-    const nojsSite = "JS999";
-    const resp = await createTalisLoggers(nojsSite);
+    const nojsSite = "JS998";
+    const resp = await createTalisLoggers(nojsSite, "192.168.100.206");
     console.log(resp);
   } catch (err) {
     console.error("Error:", err);
