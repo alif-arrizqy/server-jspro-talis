@@ -1,7 +1,7 @@
 /*
   Function to format the data
 */
-const slaFormatter = async (datas) => {
+const slaFormatter = (datas) => {
   return {  
     ts: datas.ts,
     battVolt: datas.battVolt,
@@ -41,27 +41,26 @@ const pad = (n) => (n < 10 ? `0${n}` : n);
   return string
 */
 const secToString = (sec) => {
-  const SECOND_IN_DAY = 60 / 60 / 24;
-  const MSEC_DAY = 60 * 60 * 24;
-  const SECOND_IN_HOUR = 60 / 60;
-  const MSEC_HOUR = 60 * 60;
-  const SECOND_IN_MINUTE = 60;
+  const SECONDS_IN_DAY = 86400; // 60 * 60 * 24
+  const SECONDS_IN_HOUR = 3600; // 60 * 60
+  const SECONDS_IN_MINUTE = 60;
 
-  let msec = sec;
-  let day = Math.floor(msec / SECOND_IN_DAY);
-  msec -= day * MSEC_DAY;
+  let remainingSeconds = sec;
+  const days = Math.floor(remainingSeconds / SECONDS_IN_DAY);
+  remainingSeconds -= days * SECONDS_IN_DAY;
+  const hours = Math.floor(remainingSeconds / SECONDS_IN_HOUR);
+  remainingSeconds -= hours * SECONDS_IN_HOUR;
+  const minutes = Math.floor(remainingSeconds / SECONDS_IN_MINUTE);
+  remainingSeconds -= minutes * SECONDS_IN_MINUTE;
+  const seconds = Math.floor(remainingSeconds);
 
-  let hh = Math.floor(msec / SECOND_IN_HOUR);
-  msec -= hh * MSEC_HOUR;
+  // Helper function to pad single digit numbers with a leading zero
+  const pad = (num) => String(num).padStart(2, "0");
 
-  let mm = Math.floor(msec / SECOND_IN_MINUTE);
-  msec -= mm * SECOND_IN_MINUTE;
-  let ss = Math.floor(msec);
-
-  // return string human readable
-  return day > 0
-    ? `${pad(day)}d ${pad(hh)}h ${pad(mm)}m ${pad(ss)}s`
-    : `${pad(hh)}h ${pad(mm)}m ${pad(ss)}s`;
+  // Return string in human-readable format
+  return days > 0
+    ? `${pad(days)}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`
+    : `${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
 };
 
 /* 
@@ -87,25 +86,10 @@ const groupingByTs = (log) => {
   return groupArrays;
 };
 
-// // Calculate average
-// const average = (arr, param, fix = 0) => {
-//   return (
-//     arr.map((val) => val[param]).reduce((acc, val) => acc + val, 0) / arr.length
-//   ).toFixed(fix);
-// };
-
-// // Calculate sum
-// const sum = (arr, param, fix = 0) => {
-//   return arr
-//     .map((val) => val[param])
-//     .reduce((acc, val) => acc + val, 0)
-//     .toFixed(fix);
-// };
-
 // Calculate average
 const average = (arr, param, fix = 0) => {
   const total = arr.reduce((acc, val) => acc + val[param], 0);
-  return (total / arr.length).toFixed(fix);
+  return ((total / arr.length) / 100).toFixed(fix);
 };
 
 // Calculate sum

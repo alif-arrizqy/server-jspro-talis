@@ -25,6 +25,20 @@ const fetchAllDataSla = async (dateTime, nojs) => {
       },
     });
 
+    const siteInfo = await prisma.siteInfoDetail.findUnique({
+      where: {
+        nojsSite: nojs,
+      },
+      include: {
+        siteInformation: {
+          select: {
+            nojs: true,
+            siteName: true,
+          },
+        },
+      },
+    });
+
     // filter duplicate data
     const seen = new Set();
     const result = fetchAll.filter((item) => {
@@ -33,7 +47,15 @@ const fetchAllDataSla = async (dateTime, nojs) => {
       return !duplicate;
     });
 
-    return result;
+    // add siteInfo to each item in result
+    const resultWithSiteInfo = result.map((item) => ({
+      lc: siteInfo.lc,
+      gs: siteInfo.gs,
+      siteName: siteInfo.siteInformation.siteName,
+      ...item
+    }));
+
+    return resultWithSiteInfo;
   } catch (err) {
     console.error(err);
     throw err;
