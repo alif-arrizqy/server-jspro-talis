@@ -1,4 +1,3 @@
-import prisma from "./src/app.js";
 import express from "express";
 import cors from "cors";
 import router from "./src/routes/index.js";
