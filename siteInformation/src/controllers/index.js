@@ -1,12 +1,8 @@
-import prisma from "../../app.js";
-import * as ResponseHelper from "../../helpers/responseHelper.js";
-import validateSiteInformation from "../../helpers/validationSchema/siteInfoValidation.js";
+import prisma from "../app.js";
+import * as ResponseHelper from "../helpers/responseHelper.js";
+import validateSiteInformation from "../helpers/validationSchema/siteInfoValidation.js";
 
 const fetchAllSiteInformation = async (req, res) => {
-  /*
-    Fetch all site information
-  */
-
   try {
     const fetchAll = await prisma.siteInfoDetail.findMany({
       include: {
@@ -59,12 +55,8 @@ const fetchAllSiteInformation = async (req, res) => {
 };
 
 const fetchSiteInformation = async (req, res) => {
-  /*
-    Fetch site information by nojs
-  */
   const nojs = req.params.nojs;
   try {
-    // find Site Information Detail by nojs
     const siteInfoDetail = await prisma.siteInfoDetail.findUnique({
       where: {
         nojsSite: nojs,
@@ -90,7 +82,6 @@ const fetchSiteInformation = async (req, res) => {
       return res.status(404).json(ResponseHelper.errorMessage("Site information not found", 404));
     }
 
-    // change the response format
     const response = {
       nojs: siteInfoDetail.nojsSite,
       siteName: siteInfoDetail.siteInformation.siteName,
@@ -130,14 +121,10 @@ const fetchSiteInformation = async (req, res) => {
 };
 
 const createSiteInformation = async (req, res) => {
-  /*
-    Create site information
-  */
   try {
     const data = req.body;
-    
-    // Validate format and data site information and site information detail
     const validatedData = await validateSiteInformation(data);
+
     if (validatedData.status === "failed") {
       return res.status(200).json(ResponseHelper.errorMessage("Validation failed", 400, validatedData.errors));
     }
@@ -160,9 +147,6 @@ const createSiteInformation = async (req, res) => {
 };
 
 const updateSiteInformation = async (req, res) => {
-  /*
-    Update site information by nojs
-  */
   try {
     const data = req.body;
     const nojs = req.params.nojs;
@@ -178,7 +162,7 @@ const updateSiteInformation = async (req, res) => {
       return res.status(404).json(ResponseHelper.errorMessage("Site information not found", 404));
     }
 
-    // validate format and data site information and site information detail
+    // validate site information and site information detail
     const validatedData = await validateSiteInformation(data);
 
     if (validatedData.status === "failed") {
@@ -209,13 +193,9 @@ const updateSiteInformation = async (req, res) => {
 };
 
 const deleteSiteInformation = async (req, res) => {
-  /*
-    Delete site information by nojs
-  */
   try {
     const nojs = req.params.nojs;
 
-    // check if site information exist
     const isExist = await prisma.siteInformation.findUnique({
       where: {
         nojs: nojs,
@@ -226,7 +206,6 @@ const deleteSiteInformation = async (req, res) => {
       return res.status(404).json(ResponseHelper.errorMessage("Site information not found", 404));
     }
 
-    // delete site information
     await prisma.siteInformation.delete({
       where: {
         nojs: nojs,
