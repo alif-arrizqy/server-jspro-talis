@@ -98,4 +98,24 @@ const sum = (arr, param, fix = 0) => {
   return total.toFixed(fix);
 };
 
-export { slaFormatter, millisToSec, secToString, groupingByTs, average, sum };
+// Month name formatter
+const monthFormater = (string) => {
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const date = new Date(string);
+  return `${month[date.getMonth()]} ${date.getFullYear()}`;
+};
+
+export { slaFormatter, millisToSec, secToString, groupingByTs, average, sum, monthFormater };
