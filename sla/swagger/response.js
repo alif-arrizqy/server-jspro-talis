@@ -1,5 +1,5 @@
 const responseSchemas = {
-  ErrorData: {
+  'Error Data': {
     type: "object",
     properties: {
       message: {
@@ -23,7 +23,7 @@ const responseSchemas = {
       },
     },
   },
-  BadRequest: {
+  'Bad Request': {
     type: "object",
     properties: {
       message: {
@@ -45,7 +45,7 @@ const responseSchemas = {
       },
     },
   },
-  NotFound: {
+  'Not Found': {
     type: "object",
     properties: {
       message: {
@@ -67,7 +67,7 @@ const responseSchemas = {
       },
     },
   },
-  InternalServerError: {
+  'Internal Server Error': {
     type: "object",
     properties: {
       message: {
@@ -89,7 +89,7 @@ const responseSchemas = {
       },
     },
   },
-  SuccessSLA2: {
+  'Success SLA2': {
     type: "object",
     properties: {
       message: {
@@ -167,7 +167,7 @@ const responseSchemas = {
       },
     },
   },
-  SuccessSLA1: {
+  'Success SLA1': {
     type: "object",
     properties: {
       message: {
@@ -262,7 +262,7 @@ const responseSchemas = {
       },
     },
   },
-  SuccessMessage: {
+  'Success Message': {
     type: "object",
     properties: {
       message: {
@@ -284,7 +284,7 @@ const responseSchemas = {
       },
     },
   },
-  SuccessCreate: {
+  'Success Create': {
     type: "object",
     properties: {
       message: {
