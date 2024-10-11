@@ -6,10 +6,63 @@ import compareDates from "../helpers/dateValidation.js";
 import { monthFormater } from "../helpers/slaHelper.js";
 import download from "../helpers/slaExport.js";
 
-const sla = async (req, res) => {
+/**
+ * @swagger
+ * /v1/api/sla1:
+ *   get:
+ *     summary: Retrieve SLA 1 data
+ *     description: Retrieve SLA 1 data based on the provided parameters.
+ *     parameters:
+ *       - in: query
+ *         name: nojs
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: nojs site
+ *       - in: query
+ *         name: start
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The start date and time
+ *       - in: query
+ *         name: end
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The end date and time
+ *     responses:
+ *       200:
+ *         description: SLA 1 data retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessSLA1'
+ *       400:
+ *         description: Invalid Date
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/BadRequest'
+ *       404:
+ *         description: Data Not Found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/NotFound'
+ *       500:
+ *         description: Internal Server Error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/InternalServerError'
+ */
+const sla1 = async (req, res) => {
   try {
     let dateTime;
-    const {nojs, start, end, daily} = req.query;
+    const {nojs, start, end} = req.query;
 
     if (!nojs) {
       return res.status(404).json(ResponseHelper.errorMessage("Nojs Not Found", 404));
@@ -28,33 +81,159 @@ const sla = async (req, res) => {
     if (fetchSla.length === 0) {
       return res.status(404).json(ResponseHelper.errorMessage("SLA Data Not Found", 404));
     }
-    
-    // SLA 1
-    if (!daily) {
-      const responseCalculate = calculateDataSLA1(fetchSla, dateTime);
-      const response = {
-        nojs: fetchSla[0].nojsSite,
-        site: fetchSla[0].siteName,
-        lc: fetchSla[0].lc,
-        ...responseCalculate.avg,
-      }
-      return res.status(200).json(ResponseHelper.successData(response, 200));
-    } else {
-      // SLA 2
-      const responseCalculate = calculateDataSLA2(fetchSla, dateTime, nojs);
-      return res.status(200).json(ResponseHelper.successData(responseCalculate, 200));
+
+    const responseCalculate = calculateDataSLA1(fetchSla, dateTime);
+    const response = {
+      nojs: fetchSla[0].nojsSite,
+      site: fetchSla[0].siteName,
+      lc: fetchSla[0].lc,
+      ...responseCalculate.avg,
     }
+    return res.status(200).json(ResponseHelper.successData(response, 200));
   } catch (error) {
     console.error(error);
     return res.status(500).json(ResponseHelper.errorMessage("Internal Server Error", 500));
   }
 };
 
-// SLA 3
-// result from SLA 3 is excel file
+/**
+ * @swagger
+ * /v1/api/sla2:
+ *   get:
+ *     summary: Retrieve SLA 2 data
+ *     description: Retrieve SLA 2 data based on the provided parameters.
+ *     parameters:
+ *       - in: query
+ *         name: nojs
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: nojs site
+ *       - in: query
+ *         name: start
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The start date and time
+ *       - in: query
+ *         name: end
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The end date and time
+ *     responses:
+ *       200:
+ *         description: SLA 2 data retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessSLA2'
+ *       400:
+ *         description: Invalid Date
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/BadRequest'
+ *       404:
+ *         description: Data Not Found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/NotFound'
+ *       500:
+ *         description: Internal Server Error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/InternalServerError'
+ */
+const sla2 = async (req, res) => {
+  try {
+    let dateTime;
+    const {nojs, start, end} = req.query;
+
+    if (!nojs) {
+      return res.status(404).json(ResponseHelper.errorMessage("Nojs Not Found", 404));
+    }
+
+    // start date and end date validation
+    const checkDate = compareDates(start, end);
+    if (!checkDate) {
+      return res.status(400).json(ResponseHelper.errorMessage("Invalid Date", 400));
+    }
+
+    // fetching data pmsLoggers and siteInformation from DB
+    dateTime = { start, end }
+    const fetchSla = await fetchAllDataSla(dateTime, nojs);
+    // if fetchSla is empty
+    if (fetchSla.length === 0) {
+      return res.status(404).json(ResponseHelper.errorMessage("SLA Data Not Found", 404));
+    }
+
+    // Calculate SLA 2
+    const responseCalculate = calculateDataSLA2(fetchSla, dateTime, nojs);
+
+    return res.status(200).json(ResponseHelper.successData(responseCalculate, 200));
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json(ResponseHelper.errorMessage("Internal Server Error", 500));
+  }
+};
+
+/**
+ * @swagger
+ * /v1/api/sla3:
+ *   get:
+ *     summary: Retrieve SLA 3 data
+ *     description: Retrieve SLA 3 data based on the provided parameters and export as an Excel file.
+ *     parameters:
+ *       - in: query
+ *         name: nojs
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: nojs site
+ *       - in: query
+ *         name: start
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The start date and time
+ *       - in: query
+ *         name: end
+ *         schema:
+ *           type: string
+ *           format: date-time
+ *         required: true
+ *         description: The end date and time
+ *     responses:
+ *       200:
+ *         description: File exported successfully and ready for download
+ *       400:
+ *         description: Invalid Date
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/BadRequest'
+ *       404:
+ *         description: Data Not Found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/NotFound'
+ *       500:
+ *         description: Internal Server Error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/InternalServerError'
+ */
 const sla3Export = async (req, res) => {
   try {
-    const { nojs, start, end, isV3} = req.query;
+    const { nojs, start, end } = req.query;
     
     if (!nojs) {
       return res.status(404).json(ResponseHelper.errorMessage("Nojs Not Found", 404));
@@ -109,7 +288,6 @@ const sla3Export = async (req, res) => {
       uptime: responseCalculate.duration,
       sumVolt: responseCalculate.sumBattVolt,
       date: monthFormater(start),
-      v3: isV3 === "true",
     })
 
     // Set headers for the file download
@@ -166,4 +344,4 @@ const findNearestDate = (apiData, slaData) => {
   return slaData;
 } 
 
-export { sla, sla3Export };
+export { sla1, sla2, sla3Export };
