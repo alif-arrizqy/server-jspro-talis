@@ -8,7 +8,7 @@ const swaggerOptions = {
     info: {
       title: "SLA API Documentation",
       version: "1.0.0",
-      description: "SLA API Information",
+      description: "API Documentation for SLA",
     },
     components: {
       schemas: {
