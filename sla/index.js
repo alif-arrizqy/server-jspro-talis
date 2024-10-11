@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 // routes
-app.use("/v1/api/sla", router);
+app.use("/v1/api/", router);
 
 // Setup Swagger
 setupSwagger(app);
