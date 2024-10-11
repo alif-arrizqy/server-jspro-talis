@@ -10,6 +10,7 @@ import download from "../helpers/slaExport.js";
  * @swagger
  * /v1/api/sla1:
  *   get:
+ *     tags: [SLA]
  *     summary: Retrieve SLA 1 data
  *     description: Retrieve SLA 1 data based on the provided parameters.
  *     parameters:
@@ -100,6 +101,7 @@ const sla1 = async (req, res) => {
  * @swagger
  * /v1/api/sla2:
  *   get:
+ *     tags: [SLA]
  *     summary: Retrieve SLA 2 data
  *     description: Retrieve SLA 2 data based on the provided parameters.
  *     parameters:
@@ -186,6 +188,7 @@ const sla2 = async (req, res) => {
  * @swagger
  * /v1/api/sla3:
  *   get:
+ *     tags: [SLA]
  *     summary: Retrieve SLA 3 data
  *     description: Retrieve SLA 3 data based on the provided parameters and export as an Excel file.
  *     parameters:
