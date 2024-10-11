@@ -1,6 +1,6 @@
 import Excel from 'exceljs';
 
-export default ({ log, site, uptime, sumVolt, v3, date }) => {
+export default ({ log, site, uptime, sumVolt, date }) => {
   const workbook = new Excel.Workbook();
   const worksheet = workbook.addWorksheet(site.toUpperCase());
 
@@ -61,7 +61,7 @@ export default ({ log, site, uptime, sumVolt, v3, date }) => {
   }
 
   const newColumn = { header: "Eh3", key: "eh3", width: 10 };
-  v3 && columns.splice(3, 0, newColumn);
+  columns.splice(3, 0, newColumn);
 
   worksheet.columns = columns;
   worksheet.addRows(log);
@@ -96,15 +96,15 @@ export default ({ log, site, uptime, sumVolt, v3, date }) => {
   let dataHeading;
   if (log[0].pv3Curr === undefined || log[0].pv3Curr === null) {
     dataHeading = [
-      { h: v3 ? "A1:R1" : "A1:R1", c: "A1", val: val1 },
-      { h: v3 ? "A2:R2" : "A2:R2", c: "A2", val: val2 },
-      { h: v3 ? "A3:R3" : "A3:R3", c: "A3", val: val3 },
+      { h: "A1:R1", c: "A1", val: val1 },
+      { h: "A2:R2", c: "A2", val: val2 },
+      { h: "A3:R3", c: "A3", val: val3 },
     ];
   } else {
     dataHeading = [
-      { h: v3 ? "A1:U1" : "A1:S1", c: "A1", val: val1 },
-      { h: v3 ? "A2:U2" : "A2:S2", c: "A2", val: val2 },
-      { h: v3 ? "A3:U3" : "A3:S3", c: "A3", val: val3 },
+      { h: "A1:U1", c: "A1", val: val1 },
+      { h: "A2:U2", c: "A2", val: val2 },
+      { h: "A3:U3", c: "A3", val: val3 },
     ];
   }
 
