@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm run index.js",
-    "dev": "npm run index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "prisma:init": "npx prisma init",
     "prisma:generate": "npx prisma generate",
     "prisma:migrate": "npx prisma migrate dev --name init",
@@ -22,6 +22,7 @@
     "dotenv": "^16.4.5",
     "moment-timezone": "^0.5.45",
     "node-cron": "^3.0.3",
+    "nodemon": "^3.1.7",
     "prisma": "^5.19.1",
     "zod": "^3.23.8"
   }
