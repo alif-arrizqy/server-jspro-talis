@@ -1,38 +1,39 @@
-import moment from "moment-timezone";
-import prisma from "../../app.js";
-import { tsFormatter } from "../../helpers/timestampFormatter.js";
+// import moment from "moment-timezone";
+// import prisma from "../../app.js";
+// import { tsFormatter } from "../../helpers/timestampFormatter.js";
+// import { bmsLoggersNull, bmsCellNull } from "../../helpers/nullValue.js";
 import * as ResponseHelper from "../../helpers/responseHelper.js";
 import validateTalisLoggers from "../../helpers/validationSchema/talisValidation.js";
 import { fetchLoggerTalis, deleteLoggerTalis } from "../../helpers/fetchApiHelper.js";
-import { bmsLoggersNull, bmsCellNull } from "../../helpers/nullValue.js";
+import * as Loggers from "../../models/talis.js";
 
-const createBmsCellVoltage = async (talisCell) => {
-  try {
-    return await prisma.bmsCellVoltage.create({
-      data: talisCell,
-      select: { id: true },
-    });
-  } catch (error) {
-    console.error("Error inserting bmsCellVoltage data:", error);
-    throw new Error("Failed to insert bmsCellVoltage data");
-  }
-};
+// const createBmsCellVoltage = async (talisCell) => {
+//   try {
+//     return await prisma.bmsCellVoltage.create({
+//       data: talisCell,
+//       select: { id: true },
+//     });
+//   } catch (error) {
+//     console.error("Error inserting bmsCellVoltage data:", error);
+//     throw new Error("Failed to insert bmsCellVoltage data");
+//   }
+// };
 
-const createBmsLogger = async (talisLogger, nojsSite, cellVoltageId) => {
-  try {
-    return await prisma.bmsLoggers.create({
-      data: {
-        ...talisLogger,
-        ts: tsFormatter(talisLogger.ts),
-        nojsSite,
-        cellVoltageId,
-      },
-    });
-  } catch (error) {
-    console.error("Error inserting bmsLogger data:", error);
-    throw new Error("Failed to insert bmsLogger data");
-  }
-};
+// const createBmsLogger = async (talisLogger, nojsSite, cellVoltageId) => {
+//   try {
+//     return await prisma.bmsLoggers.create({
+//       data: {
+//         ...talisLogger,
+//         ts: tsFormatter(talisLogger.ts),
+//         nojsSite,
+//         cellVoltageId,
+//       },
+//     });
+//   } catch (error) {
+//     console.error("Error inserting bmsLogger data:", error);
+//     throw new Error("Failed to insert bmsLogger data");
+//   }
+// };
 
 const handleDeleteLogger = async (ip, tsArray) => {
   const deleteResults = [];
@@ -69,9 +70,10 @@ const handleDeleteLogger = async (ip, tsArray) => {
 const createFirstData = async () => {
   try {
     // check if id 1 is already exists
-    const isExists = await prisma.bmsCellVoltage.findUnique({
-      where: { id: 1 },
-    });
+    // const isExists = await prisma.bmsCellVoltage.findUnique({
+    //   where: { id: 1 },
+    // });
+    const isExists = await Loggers.findId();
 
     if (isExists) {
       console.log("Data already exists");
@@ -79,11 +81,12 @@ const createFirstData = async () => {
     }
 
     // create first data
-    await prisma.bmsCellVoltage.create({
-      data: {
-        ...bmsCellNull,
-      },
-    });
+    // await prisma.bmsCellVoltage.create({
+    //   data: {
+    //     ...bmsCellNull,
+    //   },
+    // });
+    await Loggers.firstDataNullBmsCellVoltage();
 
     return ResponseHelper.successMessage(
       "First data created successfully",
@@ -105,18 +108,19 @@ const createTalisLoggers = async (nojsSite, ip) => {
 
       try {
         // Insert null data
-        await prisma.bmsLoggers.create({
-          data: {
-            ...bmsLoggersNull,
-            ts: moment().tz("Asia/Jakarta").format("YYYY-MM-DD HH:mm:ss"),
-            siteInformation: {
-              connect: { nojs: nojsSite }, // Adjust this based on your schema
-            },
-            bmsCellVoltage: {
-              connect: { id: 1 },
-            }
-          },
-        });
+        // await prisma.bmsLoggers.create({
+        //   data: {
+        //     ...bmsLoggersNull,
+        //     ts: moment().tz("Asia/Jakarta").format("YYYY-MM-DD HH:mm:ss"),
+        //     siteInformation: {
+        //       connect: { nojs: nojsSite }, // Adjust this based on your schema
+        //     },
+        //     bmsCellVoltage: {
+        //       connect: { id: 1 },
+        //     }
+        //   },
+        // });
+        await Loggers.insertNullBmsLogger(nojsSite);
 
         return ResponseHelper.successMessage("Talis loggers with null values created successfully", 201);
       } catch (error) {
@@ -139,8 +143,10 @@ const createTalisLoggers = async (nojsSite, ip) => {
     const results = await Promise.all(
       validatedData.map(async (element) => {
         try {
-          const bmsCellId = await createBmsCellVoltage(element.talisCell);
-          const talisLogger = await createBmsLogger(element.talisLogger, nojsSite, bmsCellId.id);
+          // const bmsCellId = await createBmsCellVoltage(element.talisCell);
+          // const talisLogger = await createBmsLogger(element.talisLogger, nojsSite, bmsCellId.id);
+          const bmsCellId = await Loggers.insertBmsCellVoltage(element.talisCell);
+          const talisLogger = await Loggers.insertBmsLogger(element.talisLogger, nojsSite, bmsCellId.id);
 
           if (!talisLogger) {
             console.log(`nojsSite: ${nojsSite} - ts: ${element.talisLogger.ts} - Failed to create talis logger data`);
