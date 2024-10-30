@@ -23,6 +23,8 @@ cron.schedule("*/6 * * * *", async () => {
       const nojsSite = site.nojs;
       const ip = site.ip;
 
+      console.log(`Creating loggers for site ${nojsSite} with IP ${ip}`);
+
       // Talis loggers
       await createTalisLoggers(nojsSite, ip);
 
