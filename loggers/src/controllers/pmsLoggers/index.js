@@ -97,13 +97,17 @@ const createPmsLoggers = async (nojsSite, ip) => {
           try {
             const deleteLoggerData = await deleteLogger(ip, val.ts);
             if (deleteLoggerData === null) {
-              console.log(`No response received from server for ts: ${val.ts}`);
+              console.log(
+                `No response received from server for NoJS: ${nojsSite} ts: ${val.ts}`
+              );
               return ResponseHelper.errorMessage(
                 "No response received from server",
                 404
               );
             } else if (deleteLoggerData.code === 200) {
-              console.log(`Logger deleted successfully for ts: ${val.ts}`);
+              console.log(
+                `PMS loggers for NoJS: ${nojsSite} - ts: ${val.ts} created and deleted successfully`
+              );
               return ResponseHelper.successMessage(
                 "Pms loggers created and deleted successfully",
                 201
@@ -133,16 +137,12 @@ const createPmsLoggers = async (nojsSite, ip) => {
         (result) => result.status === "error"
       );
       if (hasError) {
+        console.error(`PMS loggers for NoJS: ${nojsSite} failed to delete`);
         return ResponseHelper.errorMessage(
           "Some loggers failed to delete",
           500
         );
       }
-
-      return ResponseHelper.successMessage(
-        "Pms loggers created and deleted successfully",
-        201
-      );
     } catch (error) {
       console.error("Error in inserting pmsLoggers data:", error);
       return ResponseHelper.errorMessage(

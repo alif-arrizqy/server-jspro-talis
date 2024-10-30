@@ -106,7 +106,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
 
           return null; // Return null for successful creation
         } catch (error) {
-          console.error("Error processing talis logger data:", error);
+          console.error(`nojsSite: ${nojsSite} - ts: ${element.talisLogger.ts} - Error creating talis logger data:`, error);
           return ResponseHelper.errorMessage("Failed to process talis logger data", 500);
         }
       })
@@ -116,6 +116,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
     const deleteResults = await handleDeleteLogger(ip, tsArray);
 
     if (deleteResults.length > 0) {
+      console.log(`Talis loggers for NoJS: ${nojsSite} - ts: ${deleteResults} created and deleted successfully`);
       return ResponseHelper.successMessage("Talis loggers created and delete successfully", 201);
     }
   } catch (error) {
