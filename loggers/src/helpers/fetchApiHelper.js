@@ -21,6 +21,9 @@ const fetchLogger = async (apiUrl) => {
     if (error.response) {
       // Server responded with a status other than 200 range
       console.error(`Error fetching logger: ${error.response.status} - ${error.response.statusText}`);
+    } else if (error.code === 'ECONNABORTED') {
+      // Request timed out
+      console.error("Error fetching logger: Request timed out");
     } else if (error.request) {
       // Request was made but no response was received
       console.error("Error fetching logger: No response received from server");
@@ -52,6 +55,8 @@ const deleteLogger = async (apiUrl, timestamp) => {
   } catch (error) {
     if (error.response) {
       console.error(`Error deleting logger: ${error.response.status} - ${error.response.statusText}`);
+    } else if (error.code === 'ECONNABORTED') {
+      console.error("Error fetching logger: Request timed out");
     } else if (error.request) {
       console.error("Error deleting logger: No response received from server");
     } else {
@@ -81,6 +86,8 @@ const fetchLoggerTalis = async (apiUrl) => {
   } catch (error) {
     if (error.response) {
       console.error(`Error fetching logger talis: ${error.response.status} - ${error.response.statusText}`);
+    } else if (error.code === 'ECONNABORTED') {
+      console.error("Error fetching logger: Request timed out");
     } else if (error.request) {
       console.error("Error fetching logger talis: No response received from server");
     } else {
@@ -110,6 +117,8 @@ const deleteLoggerTalis = async (apiUrl, timestamp) => {
   } catch (error) {
     if (error.response) {
       console.error(`Error deleting logger talis: ${error.response.status} - ${error.response.statusText}`);
+    } else if (error.code === 'ECONNABORTED') {
+      console.error("Error fetching logger: Request timed out");
     } else if (error.request) {
       console.error("Error deleting logger talis: No response received from server");
     } else {

@@ -1,39 +1,7 @@
-// import moment from "moment-timezone";
-// import prisma from "../../app.js";
-// import { tsFormatter } from "../../helpers/timestampFormatter.js";
-// import { bmsLoggersNull, bmsCellNull } from "../../helpers/nullValue.js";
 import * as ResponseHelper from "../../helpers/responseHelper.js";
 import validateTalisLoggers from "../../helpers/validationSchema/talisValidation.js";
 import { fetchLoggerTalis, deleteLoggerTalis } from "../../helpers/fetchApiHelper.js";
 import * as Loggers from "../../models/talis.js";
-
-// const createBmsCellVoltage = async (talisCell) => {
-//   try {
-//     return await prisma.bmsCellVoltage.create({
-//       data: talisCell,
-//       select: { id: true },
-//     });
-//   } catch (error) {
-//     console.error("Error inserting bmsCellVoltage data:", error);
-//     throw new Error("Failed to insert bmsCellVoltage data");
-//   }
-// };
-
-// const createBmsLogger = async (talisLogger, nojsSite, cellVoltageId) => {
-//   try {
-//     return await prisma.bmsLoggers.create({
-//       data: {
-//         ...talisLogger,
-//         ts: tsFormatter(talisLogger.ts),
-//         nojsSite,
-//         cellVoltageId,
-//       },
-//     });
-//   } catch (error) {
-//     console.error("Error inserting bmsLogger data:", error);
-//     throw new Error("Failed to insert bmsLogger data");
-//   }
-// };
 
 const handleDeleteLogger = async (ip, tsArray) => {
   const deleteResults = [];
@@ -70,9 +38,6 @@ const handleDeleteLogger = async (ip, tsArray) => {
 const createFirstData = async () => {
   try {
     // check if id 1 is already exists
-    // const isExists = await prisma.bmsCellVoltage.findUnique({
-    //   where: { id: 1 },
-    // });
     const isExists = await Loggers.findId();
 
     if (isExists) {
@@ -81,11 +46,6 @@ const createFirstData = async () => {
     }
 
     // create first data
-    // await prisma.bmsCellVoltage.create({
-    //   data: {
-    //     ...bmsCellNull,
-    //   },
-    // });
     await Loggers.firstDataNullBmsCellVoltage();
 
     return ResponseHelper.successMessage(
@@ -108,18 +68,6 @@ const createTalisLoggers = async (nojsSite, ip) => {
 
       try {
         // Insert null data
-        // await prisma.bmsLoggers.create({
-        //   data: {
-        //     ...bmsLoggersNull,
-        //     ts: moment().tz("Asia/Jakarta").format("YYYY-MM-DD HH:mm:ss"),
-        //     siteInformation: {
-        //       connect: { nojs: nojsSite }, // Adjust this based on your schema
-        //     },
-        //     bmsCellVoltage: {
-        //       connect: { id: 1 },
-        //     }
-        //   },
-        // });
         await Loggers.insertNullBmsLogger(nojsSite);
 
         return ResponseHelper.successMessage("Talis loggers with null values created successfully", 201);
@@ -143,8 +91,6 @@ const createTalisLoggers = async (nojsSite, ip) => {
     const results = await Promise.all(
       validatedData.map(async (element) => {
         try {
-          // const bmsCellId = await createBmsCellVoltage(element.talisCell);
-          // const talisLogger = await createBmsLogger(element.talisLogger, nojsSite, bmsCellId.id);
           const bmsCellId = await Loggers.insertBmsCellVoltage(element.talisCell);
           const talisLogger = await Loggers.insertBmsLogger(element.talisLogger, nojsSite, bmsCellId.id);
 
@@ -160,7 +106,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
 
           return null; // Return null for successful creation
         } catch (error) {
-          console.error("Error processing talis logger data:", error);
+          console.error(`nojsSite: ${nojsSite} - ts: ${element.talisLogger.ts} - Error creating talis logger data:`, error);
           return ResponseHelper.errorMessage("Failed to process talis logger data", 500);
         }
       })
@@ -170,6 +116,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
     const deleteResults = await handleDeleteLogger(ip, tsArray);
 
     if (deleteResults.length > 0) {
+      console.log(`Talis loggers for NoJS: ${nojsSite} - ts: ${deleteResults} created and deleted successfully`);
       return ResponseHelper.successMessage("Talis loggers created and delete successfully", 201);
     }
   } catch (error) {
