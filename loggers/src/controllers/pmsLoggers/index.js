@@ -1,10 +1,6 @@
-import moment from "moment-timezone";
-import prisma from "../../app.js";
 import * as ResponseHelper from "../../helpers/responseHelper.js";
 import validatePmsLoggers from "../../helpers/validationSchema/pmsValidation.js";
 import { fetchLogger, deleteLogger } from "../../helpers/fetchApiHelper.js";
-import { tsFormatter } from "../../helpers/timestampFormatter.js";
-// import { pmsLoggersNull, pmsCellNull } from "../../helpers/nullValue.js";
 import * as LoggersPms from "../../models/pms.js";
 
 const createFirstDataPms = async () => {
