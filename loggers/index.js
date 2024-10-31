@@ -22,6 +22,7 @@ cron.schedule("*/6 * * * *", async () => {
     siteInformation.data.forEach(async (site) => {
       const nojsSite = site.nojs;
       const ip = site.ip;
+      const isTalis = site.talisVersion;
 
       console.log(`Creating loggers for site ${nojsSite} with IP ${ip}`);
 
@@ -29,7 +30,9 @@ cron.schedule("*/6 * * * *", async () => {
       await createTalisLoggers(nojsSite, ip);
 
       // PMS loggers
-      await createPmsLoggers(nojsSite, ip);
+      if (!isTalis) {
+        await createPmsLoggers(nojsSite, ip);
+      }
     });
   } catch (err) {
     console.error("Error during scheduled task:", err.message);
