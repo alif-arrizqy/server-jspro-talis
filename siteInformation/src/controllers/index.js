@@ -155,9 +155,12 @@ const createSiteInformation = async (req, res) => {
     }
 
     // insert new data
-    await Sites.insertSiteInformation(validatedData);
-
-    return res.status(201).json(ResponseHelper.successMessage("Site information created successfully", 201));
+    const isSuccess = await Sites.insertSiteInformation(validatedData);
+    if (isSuccess === false) {
+      return res.status(500).json(ResponseHelper.errorMessage("Failed to create site information", 500));
+    } else {
+      return res.status(201).json(ResponseHelper.successMessage("Site information created successfully", 201));
+    }
   } catch (error) {
     console.error("Error creating site information:", error);
     return res.status(500).json(ResponseHelper.errorMessage("Failed to create site information", 500));
@@ -235,9 +238,13 @@ const updateSiteInformation = async (req, res) => {
     }
 
     // update site information
-    await Sites.updateSiteInformation(nojs, validatedData);
+    const isUpdate = await Sites.updateSiteInformation(nojs, validatedData);
+    if (isUpdate === false) {
+      return res.status(500).json(ResponseHelper.errorMessage("Failed to update site information", 500));
+    } else {
+      return res.status(200).json(ResponseHelper.successMessage("Site information updated successfully", 200));
+    }
 
-    return res.status(200).json(ResponseHelper.successMessage("Site information updated successfully", 200));
   } catch (error) {
     console.error("Error updating site information:", error);
     return res.status(500).json(ResponseHelper.errorMessage("Failed to update site information", 500));
@@ -294,9 +301,13 @@ const deleteSiteInformation = async (req, res) => {
     }
 
     // delete site information
-    await Sites.deleteSiteInformation(nojs);
-
-    return res.status(200).json(ResponseHelper.successMessage("Site information deleted successfully", 200));
+    const isDelete = await Sites.deleteSiteInformation(nojs);
+    if (isDelete === false) {
+      return res.status(500).json(ResponseHelper.errorMessage("Failed to delete site information", 500));
+    } else {
+      return res.status(200).json(ResponseHelper.successMessage("Site information deleted successfully", 200));
+    }
+    
   } catch (error) {
     console.error("Error deleting site information:", error);
     return res.status(500).json(ResponseHelper.errorMessage("Failed to delete site information", 500));
