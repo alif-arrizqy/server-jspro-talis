@@ -15,6 +15,7 @@ const fetchSiteInformation = async () => {
         nojs: element.nojs,
         ip: element.ip,
         siteName: element.siteName,
+        talisVersion: element.talisVersion,
       })
     })
 
