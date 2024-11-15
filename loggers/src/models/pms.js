@@ -85,7 +85,7 @@ const checkEnergy = async () => {
 
 const insertPvNull = async () => {
   try {
-    const pv = await prisma.pv.create({
+    return await prisma.pv.create({
       data: {
         pv1Curr: null,
         pv1Volt: null,
@@ -95,7 +95,6 @@ const insertPvNull = async () => {
         pv3Volt: null,
       },
     });
-    return { status: "success", pvId: pv.id, energyId: energy.id };
   } catch (error) {
     console.error("Error inserting PV data:", error);
     return false;
