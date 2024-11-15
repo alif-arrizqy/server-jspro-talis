@@ -1,4 +1,4 @@
-import { createFirstData } from "./src/controllers/talisLoggers/index.js";
+import { createFirstDataTalis } from "./src/controllers/talisLoggers/index.js";
 import { createFirstDataPms } from "./src/controllers/pmsLoggers/index.js";
 
 console.log("Creating first data...");
@@ -10,7 +10,7 @@ isCreatedPms.then((res) => {
 });
 
 // Talis
-const isCreatedTalis = createFirstData(); // Talis
+const isCreatedTalis = createFirstDataTalis(); // Talis
 isCreatedTalis.then((res) => {
   console.log(`talis: ${res.message}`);
 });
