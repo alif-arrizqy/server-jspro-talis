@@ -163,4 +163,35 @@ const talisLoggersFormatter = async (datas) => {
   });
 };
 
-export { siteInformationFormatter, pmsLoggersFormatter, talisLoggersFormatter };
+const mpptLoggersFormatter = async (datas) => {
+  return datas.map((el) => {
+    const mppt = {
+      ts: el.ts,
+      battVolt: el.batt_volt,
+      cpuTemp: el.cpu_temp,
+      load1: el.load1,
+      load2: el.load2,
+      load3: el.load3 ? el.load3 : null,
+      pv1Curr: el.pv1_curr,
+      pv1Volt: el.pv1_volt,
+      pv2Curr: el.pv2_curr,
+      pv2Volt: el.pv2_volt,
+      pv3Curr: el.pv3_curr ? el.pv3_curr : null,
+      pv3Volt: el.pv3_volt ? el.pv3_curr : null,
+      edl1: el.edl1,
+      edl2: el.edl2,
+      edl3: el.edl3 ? el.edl3 : null,
+      eh1: el.eh1,
+      eh2: el.eh2,
+      eh3: el.eh3 ? el.eh3 : null,
+    };
+    return { mppt };
+  });
+}
+
+export {
+  siteInformationFormatter,
+  pmsLoggersFormatter,
+  talisLoggersFormatter,
+  mpptLoggersFormatter,
+};

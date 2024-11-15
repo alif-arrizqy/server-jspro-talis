@@ -73,6 +73,7 @@ const bmsLoggersNull = {
   soh: null,
   fullChargedCapacity: null,
   cycleCount: null,
+  cellVoltageId: 1,
   maxCellVoltage: null,
   minCellVoltage: null,
   cellDifference: null,
@@ -89,6 +90,33 @@ const bmsLoggersNull = {
   protectionFlag: [],
   faultStatus: [],
   errorMessages: [],
+  mpptLoggersId: 1,
 };
 
-export { pmsLoggersNull, pmsCellNull, bmsCellNull, bmsLoggersNull };
+const mpptLoggersNull = {
+  battVolt: null,
+  cpuTemp: null,
+  load1: null,
+  load2: null,
+  load3: null,
+  pv1Volt: null,
+  pv2Volt: null,
+  pv3Volt: null,
+  pv1Curr: null,
+  pv2Curr: null,
+  pv3Curr: null,
+  edl1: null,
+  edl2: null,
+  edl3: null,
+  eh1: null,
+  eh2: null,
+  eh3: null,
+};
+
+export {
+  pmsLoggersNull,
+  pmsCellNull,
+  bmsCellNull,
+  bmsLoggersNull,
+  mpptLoggersNull,
+};
