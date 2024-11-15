@@ -33,6 +33,31 @@ model Pv {
   pmsLoggers  PmsLoggers[]
 }
 
+model MpptLoggers {
+  id          BigInt       @id @default(autoincrement())
+  ts         String?   @db.VarChar(255)
+  battVolt    Int?
+  cpuTemp     Float?
+  load1       Float?
+  load2       Float?
+  load3       Float?
+  pv1Curr     Float?
+  pv1Volt     Float?
+  pv2Curr     Float?
+  pv2Volt     Float?
+  pv3Curr     Float?
+  pv3Volt     Float?
+  edl1        Float?
+  edl2        Float?
+  edl3        Float?
+  eh1         Float?
+  eh2         Float?
+  eh3         Float?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  bmsLoggers  BmsLoggers[]
+}
+
 model TvdLoggers {
   id         BigInt    @id @default(autoincrement())
   nojsSite   String
@@ -193,8 +218,10 @@ model BmsLoggers {
   protectionFlag         String[]        @db.VarChar
   faultStatus            String[]        @db.VarChar
   errorMessages          String[]        @db.VarChar
+  mpptLoggersId          BigInt?
   bmsCellVoltage         BmsCellVoltage? @relation(fields: [cellVoltageId], references: [id], onDelete: Cascade)
   siteInformation        SiteInformation @relation(fields: [nojsSite], references: [nojs], onDelete: Cascade)
+  mpptLoggers            MpptLoggers?    @relation(fields: [mpptLoggersId], references: [id], onDelete: Cascade)
 
   @@index([nojsSite], map: "nojsid_bmsLoggers", type: Hash)
   @@index([ts], map: "ts_bmsLoggers", type: Hash)
