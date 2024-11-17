@@ -1,5 +1,5 @@
 import z from "zod";
-import { talisLoggersFormatter } from "../../helpers/databaseFormatter.js";
+import { talisLoggersFormatter, mpptLoggersFormatter } from "../../helpers/databaseFormatter.js";
 
 const taliSchemas = z.object({
   ts: z.string(),
@@ -53,17 +53,42 @@ const talisCellSchemas = z.object({
   cell16: z.number().optional(),
 });
 
+const mpptSchemas = z.object({
+  ts: z.string(),
+  battVolt: z.number().nullable(),
+  cpuTemp: z.number().nullable(),
+  load1: z.number().nullable(),
+  load2: z.number().nullable(),
+  load3: z.number().nullable(),
+  pv1Volt: z.number().nullable(),
+  pv2Volt: z.number().nullable(),
+  pv3Volt: z.number().nullable(),
+  pv1Curr: z.number().nullable(),
+  pv2Curr: z.number().nullable(),
+  pv3Curr: z.number().nullable(),
+  edl1: z.number().nullable(),
+  edl2: z.number().nullable(),
+  edl3: z.number().nullable(),
+  eh1: z.number().nullable(),
+  eh2: z.number().nullable(),
+  eh3: z.number().nullable(),
+});
+
 const validateTalisLoggers = async (datas) => {
   try {
     // merge usb0 and usb1 data
     const USB0 = datas.usb0;
     const USB1 = datas.usb1;
+    const MPPT = datas.mppt;
 
     // merge usb0 and usb1 data
     const mergedData = USB0.concat(USB1);
 
     const parsedData = await talisLoggersFormatter(mergedData);
-    return parsedData.map((el) => {
+    const parsedMPPT = await mpptLoggersFormatter(MPPT);
+    
+    // validate talis loggers
+    const talisResults = parsedData.map((el) => {
       const validLogger = taliSchemas.safeParse(el.talis);
       const validCell = talisCellSchemas.safeParse(el.talisCellPack);
       return {
@@ -76,6 +101,35 @@ const validateTalisLoggers = async (datas) => {
         },
       };
     });
+
+    // Validate MPPT loggers
+    // const mpptResults = parsedMPPT.map((el) => {
+    //   const validMPPT = mpptSchemas.safeParse(el.mppt);
+    //   return {
+    //     status: validMPPT.success ? "success" : "failed",
+    //     mpptLogger: validMPPT.data,
+    //     errors: {
+    //       mpptLoggerErrors: validMPPT.error || null,
+    //     },
+    //   };
+    // });
+    // Handling parsedMPPT is empty list
+    const mpptResults = parsedMPPT.length > 0 ? parsedMPPT.map((el) => {
+      const validMPPT = mpptSchemas.safeParse(el.mppt);
+      return {
+        status: validMPPT.success ? "success" : "failed",
+        mpptLogger: validMPPT.data,
+        errors: {
+          mpptLoggerErrors: validMPPT.error || null,
+        },
+      };
+    }) : [{
+      status: "success",
+      mpptLogger: {},
+    }];
+
+    // Combine both results
+    return [...talisResults, ...mpptResults];
   } catch (error) {
     console.error("Error validating talis loggers:", error);
     return { status: "error" };

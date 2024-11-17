@@ -1,0 +1,12 @@
+-- AlterTable
+ALTER TABLE "BmsLoggers" ADD COLUMN     "energyId" BIGINT,
+ADD COLUMN     "load1" DOUBLE PRECISION,
+ADD COLUMN     "load2" DOUBLE PRECISION,
+ADD COLUMN     "load3" DOUBLE PRECISION,
+ADD COLUMN     "pvId" BIGINT;
+
+-- AddForeignKey
+ALTER TABLE "BmsLoggers" ADD CONSTRAINT "BmsLoggers_energyId_fkey" FOREIGN KEY ("energyId") REFERENCES "Energy"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "BmsLoggers" ADD CONSTRAINT "BmsLoggers_pvId_fkey" FOREIGN KEY ("pvId") REFERENCES "Pv"("id") ON DELETE CASCADE ON UPDATE CASCADE;
