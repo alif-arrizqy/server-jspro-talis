@@ -71,7 +71,6 @@ const createTalisLoggers = async (nojsSite, ip) => {
       try {
         // Insert null data
         await Loggers.insertNullBmsLogger(nojsSite);
-
         return ResponseHelper.successMessage("Talis loggers with null values created successfully", 201);
       } catch (error) {
         console.error("Error inserting talis loggers data:", error);
@@ -88,13 +87,13 @@ const createTalisLoggers = async (nojsSite, ip) => {
       return ResponseHelper.errorMessage("Failed to validate talis loggers", 500);
     }
 
-
     // Mppt Logger
     // filter only mpptLogger
     const mpptLoggers = validatedData.filter((data) => data.mpptLogger);
 
     // get mpptLogger from mpptLoggers
     let mpptLoggerIdTs = [];
+    const tsArray = [];
 
     try {
       const mpptLoggerInsertions = await Promise.all(
@@ -112,6 +111,10 @@ const createTalisLoggers = async (nojsSite, ip) => {
               // console.log("data: ", element.mpptLogger);
               // Insert MPPT Logger and return id MPPT Logger
               const response = await Loggers.insertMpptLogger(element.mpptLogger);
+              
+              // Add ts to tsArray if not already present
+              tsArray.push(element.mpptLogger.ts);
+
               // return response.id;
               return {
                 id: response.id,
@@ -130,10 +133,9 @@ const createTalisLoggers = async (nojsSite, ip) => {
     } catch (error) {
       console.error("Error inserting mpptLogger data:", error);
     }
-    console.log("mpptLoggerIdTs", mpptLoggerIdTs);
+    // console.log("mpptLoggerIdTs", mpptLoggerIdTs);
 
     // Insert BMS Cell Voltage and Talis Loggers
-    const tsArray = [];
     await Promise.all(
       validatedData.map(async (element, index) => {
         try {
@@ -189,6 +191,8 @@ const createTalisLoggers = async (nojsSite, ip) => {
               if (!tsArray.includes(element.talisLogger.ts)) {
                 tsArray.push(element.talisLogger.ts);
               }
+
+              return null; // Return null for successful creation
             }
           }
         } catch (error) {
