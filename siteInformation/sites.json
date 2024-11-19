@@ -1,6 +1,5 @@
 [
   {
-    "id": 68,
     "site_id_name": "MAL0026",
     "name": "affang",
     "onair_date": "2020-01-19",
@@ -23,7 +22,9 @@
     "webapp": "affang.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501435",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS100",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.1",
@@ -38,7 +39,6 @@
     ]
   },
   {
-    "id": 17,
     "site_id_name": "UYP244",
     "name": "aifam",
     "onair_date": "2020-01-21",
@@ -61,7 +61,9 @@
     "webapp": "aifam.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001353",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS90",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.49",
@@ -80,7 +82,6 @@
     ]
   },
   {
-    "id": 105,
     "site_id_name": "UYP199",
     "name": "aisa",
     "onair_date": "2020-01-09",
@@ -103,7 +104,9 @@
     "webapp": "aisa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001218",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS69",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.69.09",
@@ -118,7 +121,6 @@
     ]
   },
   {
-    "id": 71,
     "site_id_name": "PAP0015",
     "name": "aisandami",
     "onair_date": "2020-01-06",
@@ -141,7 +143,9 @@
     "webapp": "aisandami.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701367",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS36",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.129",
@@ -156,7 +160,6 @@
     ]
   },
   {
-    "id": 73,
     "site_id_name": "MAL0007",
     "name": "artafela",
     "onair_date": "2020-04-06",
@@ -179,7 +182,9 @@
     "webapp": "artafela.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501145",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS96",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.137",
@@ -194,7 +199,6 @@
     ]
   },
   {
-    "id": 19,
     "site_id_name": "UYP245",
     "name": "athabu",
     "onair_date": "2019-12-27",
@@ -217,7 +221,9 @@
     "webapp": "athabu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001355",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS63",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.137",
@@ -232,7 +238,6 @@
     ]
   },
   {
-    "id": 11,
     "site_id_name": "UYP177",
     "name": "bedare",
     "onair_date": "2020-01-18",
@@ -255,7 +260,9 @@
     "webapp": "bedare.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401196",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS82",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.68.217",
@@ -270,7 +277,6 @@
     ]
   },
   {
-    "id": 36,
     "site_id_name": "UXY048",
     "name": "bitorik",
     "onair_date": "2020-01-16",
@@ -293,7 +299,9 @@
     "webapp": "bitorik.sundaya.local",
     "mini_pc": "10.53.12.182",
     "terminal_id": "1901B810501436",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS79",
     "ip_gw_lc": "10.53.12.177",
     "ip_gw_gs": "",
@@ -309,7 +317,6 @@
     ]
   },
   {
-    "id": 89,
     "site_id_name": "UYO218",
     "name": "boha",
     "onair_date": "2020-11-03",
@@ -332,7 +339,9 @@
     "webapp": "boha.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2003B910100025",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS01",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.50.1 ",
@@ -347,7 +356,6 @@
     ]
   },
   {
-    "id": 2,
     "site_id_name": "UYP195",
     "name": "boldon",
     "onair_date": "2020-01-06",
@@ -370,7 +378,9 @@
     "webapp": "boldon.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401214",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS86",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.68.241",
@@ -385,7 +395,6 @@
     ]
   },
   {
-    "id": 28,
     "site_id_name": "UYP234",
     "name": "bori",
     "onair_date": "2020-01-02",
@@ -408,7 +417,9 @@
     "webapp": "bori.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001344",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS50",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.73",
@@ -423,7 +434,6 @@
     ]
   },
   {
-    "id": 91,
     "site_id_name": "UXW008",
     "name": "bumi_rahmat",
     "onair_date": "2020-12-18",
@@ -446,7 +456,9 @@
     "webapp": "bumi-rahmat.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400057",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS120",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.146",
@@ -461,7 +473,6 @@
     ]
   },
   {
-    "id": 45,
     "site_id_name": "PAP0006",
     "name": "demini",
     "onair_date": "2019-12-13",
@@ -484,7 +495,9 @@
     "webapp": "demini.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921101284",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS62",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.73",
@@ -499,7 +512,6 @@
     ]
   },
   {
-    "id": 100,
     "site_id_name": "UXW005",
     "name": "dorolamo_1",
     "onair_date": "2020-12-12",
@@ -522,7 +534,9 @@
     "webapp": "dorolamo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600067",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS130",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.34",
@@ -537,7 +551,6 @@
     ]
   },
   {
-    "id": 106,
     "site_id_name": "MAL0023",
     "name": "eliasa",
     "onair_date": "2020-02-01",
@@ -560,7 +573,9 @@
     "webapp": "eliasa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301432",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS34",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.113",
@@ -575,7 +590,6 @@
     ]
   },
   {
-    "id": 67,
     "site_id_name": "UYP265",
     "name": "faitsama",
     "onair_date": "2019-12-22",
@@ -598,7 +612,9 @@
     "webapp": "faitsama.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001462",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS91",
     "ip_gw_lc": "",
     "ip_gw_gs": "",
@@ -613,7 +629,6 @@
     ]
   },
   {
-    "id": 107,
     "site_id_name": "UYP248",
     "name": "fatase",
     "onair_date": "2019-12-28",
@@ -636,7 +651,9 @@
     "webapp": "fatase.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001359",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS75",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.105",
@@ -651,7 +668,6 @@
     ]
   },
   {
-    "id": 54,
     "site_id_name": "MAL0018",
     "name": "gah",
     "onair_date": "2020-01-29",
@@ -674,7 +690,9 @@
     "webapp": "gah.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501402",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS68",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.113",
@@ -689,7 +707,6 @@
     ]
   },
   {
-    "id": 66,
     "site_id_name": "PAP0007",
     "name": "gaya_baru",
     "onair_date": "2019-12-15",
@@ -712,7 +729,9 @@
     "webapp": "gaya-baru.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921101285",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS60",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.81",
@@ -727,7 +746,6 @@
     ]
   },
   {
-    "id": 77,
     "site_id_name": "UYP249",
     "name": "hisiobanah",
     "onair_date": "2020-01-03",
@@ -750,7 +768,9 @@
     "webapp": "hisiobanah.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001360",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS95",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.113",
@@ -765,7 +785,6 @@
     ]
   },
   {
-    "id": 69,
     "site_id_name": "MAL0033",
     "name": "honitetu",
     "onair_date": "2020-01-25",
@@ -788,7 +807,9 @@
     "webapp": "honitetu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810601481",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS42",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.41",
@@ -803,7 +824,6 @@
     ]
   },
   {
-    "id": 108,
     "site_id_name": "PAP0014",
     "name": "hore_hore",
     "onair_date": "2019-12-24",
@@ -826,7 +846,9 @@
     "webapp": "hore-hore.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401358",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS51",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.145",
@@ -841,7 +863,6 @@
     ]
   },
   {
-    "id": 39,
     "site_id_name": "UXY053",
     "name": "huhua",
     "onair_date": "2020-01-28",
@@ -864,7 +885,9 @@
     "webapp": "huhua.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810601485",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS55",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.209",
@@ -879,7 +902,6 @@
     ]
   },
   {
-    "id": 38,
     "site_id_name": "UXY050",
     "name": "hukukecil",
     "onair_date": "2020-02-04",
@@ -902,7 +924,9 @@
     "webapp": "hukukecil.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810601482",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS43",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.185",
@@ -917,7 +941,6 @@
     ]
   },
   {
-    "id": 96,
     "site_id_name": "UXY046",
     "name": "ilili",
     "onair_date": "2020-01-30",
@@ -940,7 +963,9 @@
     "webapp": "ilili.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501413",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS106",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.161",
@@ -955,7 +980,6 @@
     ]
   },
   {
-    "id": 87,
     "site_id_name": "MAL0120",
     "name": "imbu_imbu",
     "onair_date": "2020-12-10",
@@ -978,7 +1002,9 @@
     "webapp": "imbu-imbu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400066",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS131",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.42",
@@ -993,7 +1019,6 @@
     ]
   },
   {
-    "id": 47,
     "site_id_name": "UYP236",
     "name": "inyora",
     "onair_date": "2020-01-11",
@@ -1016,7 +1041,9 @@
     "webapp": "inyora.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701346",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS19",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.41",
@@ -1031,7 +1058,6 @@
     ]
   },
   {
-    "id": 34,
     "site_id_name": "UYP233",
     "name": "isenebuai",
     "onair_date": "2020-01-19",
@@ -1054,7 +1080,9 @@
     "webapp": "isenebuai.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701343",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS31",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.65",
@@ -1069,7 +1097,6 @@
     ]
   },
   {
-    "id": 18,
     "site_id_name": "UYP246",
     "name": "isogo",
     "onair_date": "2020-01-13",
@@ -1092,7 +1119,9 @@
     "webapp": "isogo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401356",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS56",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.145",
@@ -1107,7 +1136,6 @@
     ]
   },
   {
-    "id": 29,
     "site_id_name": "UXY074",
     "name": "jembatan_basah",
     "onair_date": "2019-12-30",
@@ -1130,7 +1158,9 @@
     "webapp": "jembatan-basah.sundaya.local",
     "mini_pc": "10.53.13.70",
     "terminal_id": "1901B810501524",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS64",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.13.65",
@@ -1146,7 +1176,6 @@
     ]
   },
   {
-    "id": 85,
     "site_id_name": "MAL0022",
     "name": "kainara",
     "onair_date": "2020-01-29",
@@ -1169,7 +1198,9 @@
     "webapp": "kainara.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301431",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS22",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.170",
@@ -1184,7 +1215,6 @@
     ]
   },
   {
-    "id": 129,
     "site_id_name": "MAL01121",
     "name": "kaireu",
     "onair_date": "",
@@ -1207,7 +1237,9 @@
     "webapp": "kaireu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400073",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS128",
     "ip_gw_lc": null,
     "ip_gw_gs": "172.23.51.74",
@@ -1221,7 +1253,6 @@
     ]
   },
   {
-    "id": 41,
     "site_id_name": "UXY068",
     "name": "kamar",
     "onair_date": "2020-01-16",
@@ -1244,7 +1275,9 @@
     "webapp": "kamar.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501514",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS103",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.13.41",
@@ -1259,7 +1292,6 @@
     ]
   },
   {
-    "id": 55,
     "site_id_name": "UYP250",
     "name": "kambuskato_utara",
     "onair_date": "2019-12-29",
@@ -1282,7 +1314,9 @@
     "webapp": "kambuskato-utara.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001361",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS80",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.121",
@@ -1297,7 +1331,6 @@
     ]
   },
   {
-    "id": 80,
     "site_id_name": "MAL0097",
     "name": "kampung_baru_1",
     "onair_date": "2020-01-22",
@@ -1320,7 +1353,9 @@
     "webapp": "kampung-baru-1.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401446",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS8",
     "ip_gw_lc": "",
     "ip_gw_gs": "10161162121",
@@ -1335,7 +1370,6 @@
     ]
   },
   {
-    "id": 72,
     "site_id_name": "MAL0034",
     "name": "karay",
     "onair_date": "2020-01-14",
@@ -1358,7 +1392,9 @@
     "webapp": "karay.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501491",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS93",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.225",
@@ -1373,7 +1409,6 @@
     ]
   },
   {
-    "id": 52,
     "site_id_name": "UYP257",
     "name": "karuan",
     "onair_date": "2020-02-14",
@@ -1396,7 +1431,9 @@
     "webapp": "karuan.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701415",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS24",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.169",
@@ -1411,7 +1448,6 @@
     ]
   },
   {
-    "id": 92,
     "site_id_name": "MAL0118",
     "name": "kelo",
     "onair_date": "2020-12-23",
@@ -1434,7 +1470,9 @@
     "webapp": "kelo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400064",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS118",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.186",
@@ -1449,7 +1487,6 @@
     ]
   },
   {
-    "id": 16,
     "site_id_name": "UXY077",
     "name": "kileser",
     "onair_date": "2020-01-02",
@@ -1472,7 +1509,9 @@
     "webapp": "kileser.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501527",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS92",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.13.89",
@@ -1487,7 +1526,6 @@
     ]
   },
   {
-    "id": 82,
     "site_id_name": "UYP270",
     "name": "klabot",
     "onair_date": "2018-12-14",
@@ -1510,7 +1548,9 @@
     "webapp": "klabot.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2003B920100028",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS03",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.9",
@@ -1529,7 +1569,6 @@
     ]
   },
   {
-    "id": 130,
     "site_id_name": "UYP271",
     "name": "klayili",
     "onair_date": "",
@@ -1552,7 +1591,9 @@
     "webapp": "klayili.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2010B921000023",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS107",
     "ip_gw_lc": "",
     "ip_gw_gs": "",
@@ -1567,7 +1608,6 @@
     ]
   },
   {
-    "id": 109,
     "site_id_name": "UXY062",
     "name": "kobror",
     "onair_date": "2020-01-27",
@@ -1590,7 +1630,9 @@
     "webapp": "kobror.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810701502",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS33",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.249",
@@ -1605,7 +1647,6 @@
     ]
   },
   {
-    "id": 110,
     "site_id_name": "PAP0013",
     "name": "koma_koma",
     "onair_date": "2019-12-25",
@@ -1628,7 +1669,9 @@
     "webapp": "koma-koma.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001354",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS72",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.121",
@@ -1643,7 +1686,6 @@
     ]
   },
   {
-    "id": 8,
     "site_id_name": "UYP201",
     "name": "korewatara",
     "onair_date": "2020-01-16",
@@ -1666,7 +1708,9 @@
     "webapp": "korewatara.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401220",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS87",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.69.25",
@@ -1681,7 +1725,6 @@
     ]
   },
   {
-    "id": 86,
     "site_id_name": "MAL0013",
     "name": "lamdesar_timur",
     "onair_date": "2020-01-26",
@@ -1704,7 +1747,9 @@
     "webapp": "lamdesar-timur.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301320",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS25",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.233",
@@ -1719,7 +1764,6 @@
     ]
   },
   {
-    "id": 97,
     "site_id_name": "UXW003",
     "name": "lili",
     "onair_date": "2020-12-17",
@@ -1742,7 +1786,9 @@
     "webapp": "lili.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600060",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS124",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.50",
@@ -1757,7 +1803,6 @@
     ]
   },
   {
-    "id": 95,
     "site_id_name": "UXW001",
     "name": "loleba",
     "onair_date": "2020-12-13",
@@ -1780,7 +1825,9 @@
     "webapp": "loleba.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600032",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS123",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.58",
@@ -1795,7 +1842,6 @@
     ]
   },
   {
-    "id": 42,
     "site_id_name": "UYP182",
     "name": "maan",
     "onair_date": "2020-01-03",
@@ -1818,7 +1864,9 @@
     "webapp": "maan.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001201",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS74",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.68.233",
@@ -1833,7 +1881,6 @@
     ]
   },
   {
-    "id": 13,
     "site_id_name": "MAL0025",
     "name": "madak",
     "onair_date": "2020-01-17",
@@ -1856,7 +1903,9 @@
     "webapp": "madak.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501434",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS101",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.169",
@@ -1871,7 +1920,6 @@
     ]
   },
   {
-    "id": 111,
     "site_id_name": "MAL0016",
     "name": "maikor",
     "onair_date": "2020-01-26",
@@ -1894,7 +1942,9 @@
     "webapp": "maikor.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810701398",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS41",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.97",
@@ -1909,7 +1959,6 @@
     ]
   },
   {
-    "id": 112,
     "site_id_name": "UYP259",
     "name": "makaroro",
     "onair_date": "2020-01-21",
@@ -1932,7 +1981,9 @@
     "webapp": "makaroro.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401423",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS76",
     "ip_gw_lc": "",
     "ip_gw_gs": "",
@@ -1947,7 +1998,6 @@
     ]
   },
   {
-    "id": 56,
     "site_id_name": "UXY070",
     "name": "marantutul",
     "onair_date": "2020-01-12",
@@ -1970,7 +2020,9 @@
     "webapp": "marantutul.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301516",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS47",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.2.41",
@@ -1985,7 +2037,6 @@
     ]
   },
   {
-    "id": 7,
     "site_id_name": "UXY069",
     "name": "marfenfen",
     "onair_date": "2020-02-18",
@@ -2008,7 +2059,9 @@
     "webapp": "marfenfen.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810701515",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS18",
     "ip_gw_lc": "10.53.13.49",
     "ip_gw_gs": "",
@@ -2023,7 +2076,6 @@
     ]
   },
   {
-    "id": 65,
     "site_id_name": "MAL0027",
     "name": "masawoi",
     "onair_date": "2020-01-31",
@@ -2046,7 +2098,9 @@
     "webapp": "masawoi.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810601438",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS40",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.09",
@@ -2061,7 +2115,6 @@
     ]
   },
   {
-    "id": 48,
     "site_id_name": "UYP227",
     "name": "mawe",
     "onair_date": "2019-11-28",
@@ -2084,7 +2137,9 @@
     "webapp": "mawe.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921101287",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS53",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.217",
@@ -2099,7 +2154,6 @@
     ]
   },
   {
-    "id": 20,
     "site_id_name": "UYP226",
     "name": "menarbu",
     "onair_date": "2020-01-18",
@@ -2122,7 +2176,9 @@
     "webapp": "menarbu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701245",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS27",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.193",
@@ -2137,7 +2193,6 @@
     ]
   },
   {
-    "id": 113,
     "site_id_name": "MAL0014",
     "name": "meror_1",
     "onair_date": "2020-01-28",
@@ -2160,7 +2215,9 @@
     "webapp": "meror-1.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810701321",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS45",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.241",
@@ -2175,7 +2232,6 @@
     ]
   },
   {
-    "id": 114,
     "site_id_name": "UYP266",
     "name": "mirafan",
     "onair_date": "2019-12-28",
@@ -2198,7 +2254,9 @@
     "webapp": "mirafan.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001463",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS81",
     "ip_gw_lc": "",
     "ip_gw_gs": "",
@@ -2213,7 +2271,6 @@
     ]
   },
   {
-    "id": 12,
     "site_id_name": "MAL0021",
     "name": "mising",
     "onair_date": "2020-01-20",
@@ -2236,7 +2293,9 @@
     "webapp": "mising.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501424",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS58",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.145",
@@ -2251,7 +2310,6 @@
     ]
   },
   {
-    "id": 115,
     "site_id_name": "UXY072",
     "name": "mitak_kolam",
     "onair_date": "2020-01-22",
@@ -2274,7 +2332,9 @@
     "webapp": "mitak-kolam.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301522",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS44",
     "ip_gw_lc": "10.53.13.57",
     "ip_gw_gs": "",
@@ -2289,7 +2349,6 @@
     ]
   },
   {
-    "id": 6,
     "site_id_name": "UYP220",
     "name": "mogatemin",
     "onair_date": "2019-12-29",
@@ -2312,7 +2371,9 @@
     "webapp": "mogatemin.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401239",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS52",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.169",
@@ -2327,7 +2388,6 @@
     ]
   },
   {
-    "id": 75,
     "site_id_name": "PAP0012",
     "name": "muwinbow",
     "onair_date": "2019-12-14",
@@ -2350,7 +2410,9 @@
     "webapp": "muwinbow.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921101294",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS37",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.113",
@@ -2365,7 +2427,6 @@
     ]
   },
   {
-    "id": 1,
     "site_id_name": "UYP260",
     "name": "nanimori",
     "onair_date": "2020-02-01",
@@ -2388,7 +2449,9 @@
     "webapp": "nanimori.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701450",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS11",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.201",
@@ -2403,7 +2466,6 @@
     ]
   },
   {
-    "id": 116,
     "site_id_name": "UYP225",
     "name": "niap",
     "onair_date": "2020-01-18",
@@ -2426,7 +2488,9 @@
     "webapp": "niap.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701244",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS26",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.69.89",
@@ -2441,7 +2505,6 @@
     ]
   },
   {
-    "id": 70,
     "site_id_name": "PAP0008",
     "name": "nij",
     "onair_date": "2019-12-14",
@@ -2464,7 +2527,9 @@
     "webapp": "nij.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921101286",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS59",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.89",
@@ -2479,7 +2544,6 @@
     ]
   },
   {
-    "id": 117,
     "site_id_name": "MAL0050",
     "name": "nondang",
     "onair_date": "2020-01-14",
@@ -2502,7 +2566,9 @@
     "webapp": "nondang.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401156",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS6",
     "ip_gw_lc": "10.53.11.25",
     "ip_gw_gs": "",
@@ -2517,7 +2583,6 @@
     ]
   },
   {
-    "id": 94,
     "site_id_name": "MAL01122",
     "name": "ocimaloleo",
     "onair_date": "2020-12-24",
@@ -2540,7 +2605,9 @@
     "webapp": "ocimaloleo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400074",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS127",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.194",
@@ -2555,7 +2622,6 @@
     ]
   },
   {
-    "id": 88,
     "site_id_name": "UXW011",
     "name": "oha",
     "onair_date": "2020-12-15",
@@ -2578,7 +2644,9 @@
     "webapp": "oha.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400063",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS125",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.202",
@@ -2593,7 +2661,6 @@
     ]
   },
   {
-    "id": 24,
     "site_id_name": "UYP231",
     "name": "puragi",
     "onair_date": "2020-01-18",
@@ -2616,7 +2683,9 @@
     "webapp": "puragi.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401341",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS71",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.57",
@@ -2631,7 +2700,6 @@
     ]
   },
   {
-    "id": 25,
     "site_id_name": "UYP180",
     "name": "renis",
     "onair_date": "2020-01-06",
@@ -2654,7 +2722,9 @@
     "webapp": "renis.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001199",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS61",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.68.225",
@@ -2669,7 +2739,6 @@
     ]
   },
   {
-    "id": 22,
     "site_id_name": "UXY055",
     "name": "rumoy",
     "onair_date": "2020-02-01",
@@ -2692,7 +2761,9 @@
     "webapp": "rumoy.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501487",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS97",
     "ip_gw_lc": "10.53.13.09",
     "ip_gw_gs": "",
@@ -2707,7 +2778,6 @@
     ]
   },
   {
-    "id": 102,
     "site_id_name": "MAL0119",
     "name": "saketa",
     "onair_date": "2020-12-07",
@@ -2730,7 +2800,9 @@
     "webapp": "saketa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400065",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS129",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.66",
@@ -2745,7 +2817,6 @@
     ]
   },
   {
-    "id": 61,
     "site_id_name": "UXY056",
     "name": "salagor_kota",
     "onair_date": "2020-01-04",
@@ -2768,7 +2839,9 @@
     "webapp": "salagor-kota.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501488",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS99",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.13.17",
@@ -2783,7 +2856,6 @@
     ]
   },
   {
-    "id": 50,
     "site_id_name": "UXY076",
     "name": "salas",
     "onair_date": "2019-12-30",
@@ -2806,7 +2878,9 @@
     "webapp": "salas.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501526",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS88",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.81",
@@ -2821,7 +2895,6 @@
     ]
   },
   {
-    "id": 26,
     "site_id_name": "UYP191",
     "name": "sandei",
     "onair_date": "2020-01-24",
@@ -2844,7 +2917,9 @@
     "webapp": "sandei.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701210",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS39",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.73",
@@ -2859,7 +2934,6 @@
     ]
   },
   {
-    "id": 64,
     "site_id_name": "UYP243",
     "name": "sararti",
     "onair_date": "2020-01-09",
@@ -2882,7 +2956,9 @@
     "webapp": "sararti.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701352",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS20",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.129",
@@ -2897,7 +2973,6 @@
     ]
   },
   {
-    "id": 119,
     "site_id_name": "UYP247",
     "name": "sariai",
     "onair_date": "2020-01-14",
@@ -2920,7 +2995,9 @@
     "webapp": "sariai.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701357",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS29",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.153",
@@ -2935,7 +3012,6 @@
     ]
   },
   {
-    "id": 27,
     "site_id_name": "PAP0022",
     "name": "sayori_sikama",
     "onair_date": "2020-01-11",
@@ -2958,7 +3034,9 @@
     "webapp": "sayori-sikama.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701469",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS23",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.161",
@@ -2973,7 +3051,6 @@
     ]
   },
   {
-    "id": 103,
     "site_id_name": "UXW010",
     "name": "sekely",
     "onair_date": "2020-12-20",
@@ -2996,7 +3073,9 @@
     "webapp": "sekely.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400062",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS119",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.74",
@@ -3011,7 +3090,6 @@
     ]
   },
   {
-    "id": 120,
     "site_id_name": "UYP208",
     "name": "seni",
     "onair_date": "2020-01-04",
@@ -3034,7 +3112,9 @@
     "webapp": "seni.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001227",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS66",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.105",
@@ -3049,7 +3129,6 @@
     ]
   },
   {
-    "id": 60,
     "site_id_name": "UXY075",
     "name": "sera",
     "onair_date": "2020-02-04",
@@ -3072,7 +3151,9 @@
     "webapp": "sera.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501525",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS102",
     "ip_gw_lc": "10.53.13.73",
     "ip_gw_gs": "",
@@ -3087,7 +3168,6 @@
     ]
   },
   {
-    "id": 35,
     "site_id_name": "UYP160",
     "name": "seya",
     "onair_date": "2020-01-08",
@@ -3110,7 +3190,9 @@
     "webapp": "seya.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001179",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS83",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.68.193",
@@ -3125,7 +3207,6 @@
     ]
   },
   {
-    "id": 46,
     "site_id_name": "MAL0092",
     "name": "silang",
     "onair_date": "2020-01-18",
@@ -3148,7 +3229,9 @@
     "webapp": "silang.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401406",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS07",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.129",
@@ -3163,7 +3246,6 @@
     ]
   },
   {
-    "id": 121,
     "site_id_name": "UYP241",
     "name": "siranggo",
     "onair_date": "2019-12-28",
@@ -3186,7 +3268,9 @@
     "webapp": "siranggo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401350",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS57",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.113",
@@ -3201,7 +3285,6 @@
     ]
   },
   {
-    "id": 31,
     "site_id_name": "UYP258",
     "name": "siri_siri",
     "onair_date": "2020-01-12",
@@ -3224,7 +3307,9 @@
     "webapp": "siri-siri.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401422",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS85",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.169",
@@ -3239,7 +3324,6 @@
     ]
   },
   {
-    "id": 51,
     "site_id_name": "UYP197",
     "name": "sobiar",
     "onair_date": "2020-02-09",
@@ -3262,7 +3346,9 @@
     "webapp": "sobiar.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701216",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS09",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.81",
@@ -3277,7 +3363,6 @@
     ]
   },
   {
-    "id": 21,
     "site_id_name": "UXY054",
     "name": "sofyanin",
     "onair_date": "2020-01-29",
@@ -3300,7 +3385,9 @@
     "webapp": "sofyanin.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301486",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS48",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.217",
@@ -3315,7 +3402,6 @@
     ]
   },
   {
-    "id": 49,
     "site_id_name": "MAL0020",
     "name": "solang",
     "onair_date": "2020-01-13",
@@ -3338,7 +3424,9 @@
     "webapp": "solang.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501420",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS98",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.249",
@@ -3353,7 +3441,6 @@
     ]
   },
   {
-    "id": 104,
     "site_id_name": "UXW007",
     "name": "soligi",
     "onair_date": "2020-12-24",
@@ -3376,7 +3463,9 @@
     "webapp": "soligi.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400031",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS117",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.178",
@@ -3391,7 +3480,6 @@
     ]
   },
   {
-    "id": 15,
     "site_id_name": "UYP198",
     "name": "sorowan",
     "onair_date": "2019-12-23",
@@ -3414,7 +3502,9 @@
     "webapp": "sorowan.sundaya.local",
     "mini_pc": "10.10.69.5",
     "terminal_id": "1901B921001217",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS89",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.10.69.1",
@@ -3430,7 +3520,6 @@
     ]
   },
   {
-    "id": 63,
     "site_id_name": "UYP239",
     "name": "sorry",
     "onair_date": "2019-12-31",
@@ -3453,7 +3542,9 @@
     "webapp": "sorry.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001348",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS77",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.97",
@@ -3468,7 +3559,6 @@
     ]
   },
   {
-    "id": 93,
     "site_id_name": "MAL0117",
     "name": "sosepe",
     "onair_date": "2020-12-14",
@@ -3491,7 +3581,9 @@
     "webapp": "sosepe.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820400058",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS116",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.210",
@@ -3506,7 +3598,6 @@
     ]
   },
   {
-    "id": 78,
     "site_id_name": "UXY051",
     "name": "sukowati",
     "onair_date": "2020-02-01",
@@ -3529,7 +3620,9 @@
     "webapp": "sukowati.sundaya.local",
     "mini_pc": "10.161.1.198",
     "terminal_id": "1901B810601483",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS54",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.193",
@@ -3545,7 +3638,6 @@
     ]
   },
   {
-    "id": 43,
     "site_id_name": "MAL0106",
     "name": "suma_tinggi",
     "onair_date": "2020-01-13",
@@ -3568,7 +3660,9 @@
     "webapp": "suma-tinggi.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401470",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS15",
     "ip_gw_lc": "10.53.12.217",
     "ip_gw_gs": "",
@@ -3583,7 +3677,6 @@
     ]
   },
   {
-    "id": 74,
     "site_id_name": "MAL0105",
     "name": "sumae",
     "onair_date": "2020-01-11",
@@ -3606,7 +3699,9 @@
     "webapp": "sumae.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401456",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS12",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.209",
@@ -3621,7 +3716,6 @@
     ]
   },
   {
-    "id": 30,
     "site_id_name": "UYP242",
     "name": "sumano",
     "onair_date": "2020-01-21",
@@ -3644,7 +3738,9 @@
     "webapp": "sumano.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920401351",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS78",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.121",
@@ -3659,7 +3755,6 @@
     ]
   },
   {
-    "id": 9,
     "site_id_name": "UXY067",
     "name": "sumber_agung",
     "onair_date": "2020-01-02",
@@ -3682,7 +3777,9 @@
     "webapp": "sumber-agung.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501606",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS70",
     "ip_gw_lc": "10.53.13.33",
     "ip_gw_gs": "",
@@ -3697,7 +3794,6 @@
     ]
   },
   {
-    "id": 4,
     "site_id_name": "UYP207",
     "name": "sun",
     "onair_date": "2020-01-06",
@@ -3720,7 +3816,9 @@
     "webapp": "sun.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001226",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS65",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.97",
@@ -3735,7 +3833,6 @@
     ]
   },
   {
-    "id": 5,
     "site_id_name": "UYP237",
     "name": "sunei",
     "onair_date": "2019-12-30",
@@ -3758,7 +3855,9 @@
     "webapp": "sunei.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001347",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS35",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.89",
@@ -3773,7 +3872,6 @@
     ]
   },
   {
-    "id": 122,
     "site_id_name": "PAP0023",
     "name": "suwiyam",
     "onair_date": "2019-12-23",
@@ -3796,7 +3894,9 @@
     "webapp": "suwiyam.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001480",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS73",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.137",
@@ -3811,7 +3911,6 @@
     ]
   },
   {
-    "id": 37,
     "site_id_name": "UXY049",
     "name": "taa",
     "onair_date": "2020-01-19",
@@ -3834,7 +3933,9 @@
     "webapp": "taa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501437",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS94",
     "ip_gw_lc": "10.53.12.185",
     "ip_gw_gs": "",
@@ -3849,7 +3950,6 @@
     ]
   },
   {
-    "id": 79,
     "site_id_name": "MAL0107",
     "name": "tabajaya",
     "onair_date": "2020-01-15",
@@ -3872,7 +3972,9 @@
     "webapp": "tabajaya.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401471",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS14",
     "ip_gw_lc": "10.53.12.225",
     "ip_gw_gs": "",
@@ -3887,7 +3989,6 @@
     ]
   },
   {
-    "id": 123,
     "site_id_name": "MAL0040",
     "name": "tabangame",
     "onair_date": "2020-01-16",
@@ -3910,7 +4011,9 @@
     "webapp": "tabangame.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401069",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS13",
     "ip_gw_lc": "10.53.11.1",
     "ip_gw_gs": "",
@@ -3925,7 +4028,6 @@
     ]
   },
   {
-    "id": 99,
     "site_id_name": "UXW004",
     "name": "tatangapu",
     "onair_date": "2020-12-15",
@@ -3948,7 +4050,9 @@
     "webapp": "tatangapu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600061",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS126",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.218",
@@ -3963,7 +4067,6 @@
     ]
   },
   {
-    "id": 57,
     "site_id_name": "MAL0024",
     "name": "teineman",
     "onair_date": "2020-01-30",
@@ -3986,7 +4089,9 @@
     "webapp": "teineman.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301433",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS30",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.161",
@@ -4001,7 +4106,6 @@
     ]
   },
   {
-    "id": 23,
     "site_id_name": "UXY052",
     "name": "tihu",
     "onair_date": "2020-02-09",
@@ -4024,7 +4128,9 @@
     "webapp": "tihu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810601484",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS38",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.1.201",
@@ -4039,7 +4145,6 @@
     ]
   },
   {
-    "id": 32,
     "site_id_name": "MAL0077",
     "name": "tomara",
     "onair_date": "2020-01-18",
@@ -4062,7 +4167,9 @@
     "webapp": "tomara.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401596",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS05",
     "ip_gw_lc": "10.53.13.113",
     "ip_gw_gs": "",
@@ -4077,7 +4184,6 @@
     ]
   },
   {
-    "id": 90,
     "site_id_name": "UXW009",
     "name": "tosoa",
     "onair_date": "2020-12-12",
@@ -4100,7 +4206,9 @@
     "webapp": "tosoa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2001B820100059",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS122",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.226",
@@ -4115,7 +4223,6 @@
     ]
   },
   {
-    "id": 33,
     "site_id_name": "MAL0078",
     "name": "tutupa",
     "onair_date": "2020-01-18",
@@ -4138,7 +4245,9 @@
     "webapp": "tutupa.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401322",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS16",
     "ip_gw_lc": "10.53.11.249",
     "ip_gw_gs": "",
@@ -4153,7 +4262,6 @@
     ]
   },
   {
-    "id": 101,
     "site_id_name": "UXW006",
     "name": "upt_sp2_patlean",
     "onair_date": "2020-12-17",
@@ -4176,7 +4284,9 @@
     "webapp": "upt-sp2-patlean.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600075",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS121",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.234",
@@ -4191,7 +4301,6 @@
     ]
   },
   {
-    "id": 84,
     "site_id_name": "UYO217",
     "name": "waan",
     "onair_date": "2018-12-11",
@@ -4214,7 +4323,9 @@
     "webapp": "waan.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2003B910100026",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS02",
     "ip_gw_lc": "10.53.50.11",
     "ip_gw_gs": "",
@@ -4229,7 +4340,6 @@
     ]
   },
   {
-    "id": 14,
     "site_id_name": "UXY078",
     "name": "waras_waras",
     "onair_date": "2020-01-06",
@@ -4252,7 +4362,9 @@
     "webapp": "waras-waras.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501528",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS105",
     "ip_gw_lc": "10.53.13.97",
     "ip_gw_gs": "",
@@ -4267,7 +4379,6 @@
     ]
   },
   {
-    "id": 125,
     "site_id_name": "UYP240",
     "name": "warayaru",
     "onair_date": "2020-01-28",
@@ -4290,7 +4401,9 @@
     "webapp": "warayaru.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701349",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS32",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.105",
@@ -4305,7 +4418,6 @@
     ]
   },
   {
-    "id": 126,
     "site_id_name": "UXY061",
     "name": "warloi",
     "onair_date": "2020-01-26",
@@ -4328,7 +4440,9 @@
     "webapp": "warloi.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810701501",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS28",
     "ip_gw_lc": "10.53.13.25",
     "ip_gw_gs": "",
@@ -4343,7 +4457,6 @@
     ]
   },
   {
-    "id": 53,
     "site_id_name": "MAL0008",
     "name": "waru",
     "onair_date": "2020-01-13",
@@ -4366,7 +4479,9 @@
     "webapp": "waru.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810501146",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS104",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.0.145",
@@ -4381,7 +4496,6 @@
     ]
   },
   {
-    "id": 83,
     "site_id_name": "UXW002",
     "name": "wasileo",
     "onair_date": "2020-12-17",
@@ -4404,7 +4518,9 @@
     "webapp": "wasileo.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2017B820600033",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS132",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.24.0.242",
@@ -4419,7 +4535,6 @@
     ]
   },
   {
-    "id": 76,
     "site_id_name": "MAL0091",
     "name": "wayatim",
     "onair_date": "2020-01-19",
@@ -4442,7 +4557,9 @@
     "webapp": "wayatim.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B820401403",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS10",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.1.121",
@@ -4457,7 +4574,6 @@
     ]
   },
   {
-    "id": 128,
     "site_id_name": "UXY073",
     "name": "werlumdity",
     "onair_date": "",
@@ -4480,7 +4596,9 @@
     "webapp": "werlumdity.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B810301523",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS49",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.161.2.57",
@@ -4495,7 +4613,6 @@
     ]
   },
   {
-    "id": 81,
     "site_id_name": "UYP269",
     "name": "wilty",
     "onair_date": "2018-12-23",
@@ -4518,7 +4635,9 @@
     "webapp": "wilty.sundaya.local",
     "mini_pc": null,
     "terminal_id": "2003B920100027",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS04",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.151.160.1",
@@ -4533,7 +4652,6 @@
     ]
   },
   {
-    "id": 44,
     "site_id_name": "PAP0021",
     "name": "wombu",
     "onair_date": "2020-01-10",
@@ -4556,7 +4674,9 @@
     "webapp": "wombu.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701468",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS21",
     "ip_gw_lc": "",
     "ip_gw_gs": "172.23.2.153",
@@ -4571,7 +4691,6 @@
     ]
   },
   {
-    "id": 127,
     "site_id_name": "UYP221",
     "name": "yabore",
     "onair_date": "2020-01-08",
@@ -4594,7 +4713,9 @@
     "webapp": "yabore.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B920701240",
-    "scc": "3",
+    "mppt_type": "3",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS17",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.11.177",
@@ -4609,7 +4730,6 @@
     ]
   },
   {
-    "id": 62,
     "site_id_name": "UYP235",
     "name": "yarat",
     "onair_date": "2020-01-02",
@@ -4632,7 +4752,9 @@
     "webapp": "yarat.sundaya.local",
     "mini_pc": null,
     "terminal_id": "1901B921001345",
-    "scc": "2",
+    "mppt_type": "2",
+    "talis_version": true,
+    "tvd_site": false,
     "nojs": "JS84",
     "ip_gw_lc": "",
     "ip_gw_gs": "10.53.12.81",
