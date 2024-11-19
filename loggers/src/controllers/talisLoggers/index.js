@@ -130,7 +130,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
     } catch (error) {
       console.error("Error inserting mpptLogger data:", error);
     }
-    // console.log("mpptLoggerIdTs", mpptLoggerIdTs);
+    console.log("mpptLoggerIdTs", mpptLoggerIdTs);
 
     // Insert BMS Cell Voltage and Talis Loggers
     const tsArray = [];
@@ -172,7 +172,23 @@ const createTalisLoggers = async (nojsSite, ip) => {
               return null; // Return null for successful creation
             } else {
               console.log(`nojsSite: ${nojsSite} - ts: ${element.talisLogger.ts} - mpptLoggerId or bmsCellId not found`);
-              return ResponseHelper.errorMessage("mpptLoggerId or bmsCellId not found", 500);
+              // Insert using mpptLoggerId 1
+              const insertTalisLogger = await Loggers.insertBmsLogger(
+                element.talisLogger,
+                nojsSite,
+                bmsCellId,
+                1
+              );
+
+              if (!insertTalisLogger) {
+                console.log(`nojsSite: ${nojsSite} - ts: ${element.talisLogger.ts} - Failed to create talis logger data`);
+                return ResponseHelper.errorMessage("Failed to create talis logger data", 500);
+              }
+
+              // Add ts to tsArray if not already present
+              if (!tsArray.includes(element.talisLogger.ts)) {
+                tsArray.push(element.talisLogger.ts);
+              }
             }
           }
         } catch (error) {
@@ -181,7 +197,7 @@ const createTalisLoggers = async (nojsSite, ip) => {
         }
       })
     );
-    
+
     // Handle deletion of loggers
     const deleteResults = await handleDeleteLogger(ip, tsArray);
 
